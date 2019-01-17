@@ -41,7 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBaseFormService.cs" />
+    <Compile Include="IMainService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ERP.Framework.ViewModel\ERP.Framework.ViewModel.csproj">
+      <Project>{CB9DB0E7-A6DC-4A53-83CF-DFA4B4664B94}</Project>
+      <Name>ERP.Framework.ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
