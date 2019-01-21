@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ERP.Framework.IService
 {
     public interface IBaseFormService
-    {
+    { 
         List<VM_Toolbar> GetToolbars(SysModule sysModule);
     }
 }

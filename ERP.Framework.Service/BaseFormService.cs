@@ -25,14 +25,15 @@ namespace ERP.Framework.Service
         }
         public List<VM_Toolbar> GetToolbars(SysModule sysModule)
         {
-            return new List<VM_Toolbar>()
-            {
-                new VM_Toolbar()
-                {
-                    id=Guid.NewGuid().ToString(),
-                     title = "test1"
-                }
-            };
+            return toolBarRepository.GetToolbars(sysModule);
+            //return new List<VM_Toolbar>()
+            //{
+            //    new VM_Toolbar()
+            //    {
+            //        id=Guid.NewGuid().ToString(),
+            //         title = "test1"
+            //    }
+            //};
         }
     }
 }

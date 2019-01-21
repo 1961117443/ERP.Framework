@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ERP.Framework.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace ERP.Framework.IRepository
 {
     public interface ISysToolBarRepository
     {
+        List<VM_Toolbar> GetToolbars(SysModule sysModule);
     }
 }

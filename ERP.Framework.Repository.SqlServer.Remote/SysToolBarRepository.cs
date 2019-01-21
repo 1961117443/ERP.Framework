@@ -6,18 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ERP.Framework.Repository.SqlServer
+namespace ERP.Framework.Repository.SqlServer.Remote
 {
-    public class SysToolBarRepository: ISysToolBarRepository
+    public class SysToolBarRepository : ISysToolBarRepository
     {
         public List<VM_Toolbar> GetToolbars(SysModule sysModule)
         {
-            var list= new List<VM_Toolbar>()
+            var list = new List<VM_Toolbar>()
             {
                 new VM_Toolbar()
                 {
                     id=Guid.NewGuid().ToString(),
-                     title = "test1"
+                     title = "test1:Remote"
                 }
             };
             return list;

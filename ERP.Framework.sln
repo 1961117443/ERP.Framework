@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.Framework.Core", "ERP.F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.Framework.Common", "ERP.Framework.Common\ERP.Framework.Common.csproj", "{B94B4600-355C-42EA-B006-AA66D04011FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.Framework.Repository.SqlServer.Remote", "ERP.Framework.Repository.SqlServer.Remote\ERP.Framework.Repository.SqlServer.Remote.csproj", "{E2101477-CE4E-47D8-AD71-C3853F5FC460}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{B94B4600-355C-42EA-B006-AA66D04011FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B94B4600-355C-42EA-B006-AA66D04011FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B94B4600-355C-42EA-B006-AA66D04011FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2101477-CE4E-47D8-AD71-C3853F5FC460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2101477-CE4E-47D8-AD71-C3853F5FC460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2101477-CE4E-47D8-AD71-C3853F5FC460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2101477-CE4E-47D8-AD71-C3853F5FC460}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{CB9DB0E7-A6DC-4A53-83CF-DFA4B4664B94} = {191E3FB4-9B74-4120-9FD1-3F61B986D9C6}
 		{1CC21A73-D934-430B-A8EA-32885A507992} = {65B18DBA-CA8B-46E0-A741-718A5F7D1ED1}
 		{B94B4600-355C-42EA-B006-AA66D04011FD} = {65B18DBA-CA8B-46E0-A741-718A5F7D1ED1}
+		{E2101477-CE4E-47D8-AD71-C3853F5FC460} = {81F959EC-CE56-4EC9-A0E3-599502A55F25}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B57FC7C-4EBD-4679-9715-B2E05A9F9E28}
