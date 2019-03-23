@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Client.BASE
 {
-    public partial class Base : Form
+    public partial class Basic : Form
     {
-        public Base()
+        public Basic()
         {
             InitializeComponent();
         }

@@ -41,7 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseAction.cs" />
+    <Compile Include="BillContext.cs" />
+    <Compile Include="ButtonAction\NewAction.cs" />
+    <Compile Include="IBillAction.cs" />
+    <Compile Include="IBillData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TreeItem.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

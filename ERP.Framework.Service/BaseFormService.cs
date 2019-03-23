@@ -25,6 +25,7 @@ namespace ERP.Framework.Service
         }
         public List<VM_Toolbar> GetToolbars(SysModule sysModule)
         {
+            var toolbars=  toolBarRepository.GetList(w => w.SysModuleID == sysModule.id);
             return toolBarRepository.GetToolbars(sysModule);
             //return new List<VM_Toolbar>()
             //{

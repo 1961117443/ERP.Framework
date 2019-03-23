@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppContext.cs" />
     <Compile Include="AutofacManager\AutofacHelper.cs" />
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
@@ -55,11 +56,11 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BASE\Base.cs">
+    <Compile Include="BASE\Basic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BASE\Base.Designer.cs">
-      <DependentUpon>Base.cs</DependentUpon>
+    <Compile Include="BASE\Basic.Designer.cs">
+      <DependentUpon>Basic.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -73,8 +74,8 @@
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BASE\Base.resx">
-      <DependentUpon>Base.cs</DependentUpon>
+    <EmbeddedResource Include="BASE\Basic.resx">
+      <DependentUpon>Basic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -106,6 +107,10 @@
     <ProjectReference Include="..\ERP.Framework.Common\ERP.Framework.Common.csproj">
       <Project>{b94b4600-355c-42ea-b006-aa66d04011fd}</Project>
       <Name>ERP.Framework.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERP.Framework.Core\ERP.Framework.Core.csproj">
+      <Project>{1CC21A73-D934-430B-A8EA-32885A507992}</Project>
+      <Name>ERP.Framework.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\ERP.Framework.IService\ERP.Framework.IService.csproj">
       <Project>{0a244d97-4a7f-4434-a651-0840610ffdf3}</Project>

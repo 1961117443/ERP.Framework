@@ -42,7 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\DependencyInjectionAttribute.cs" />
+    <Compile Include="Extensions\TreeItemExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ERP.Framework.Core\ERP.Framework.Core.csproj">
+      <Project>{1CC21A73-D934-430B-A8EA-32885A507992}</Project>
+      <Name>ERP.Framework.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

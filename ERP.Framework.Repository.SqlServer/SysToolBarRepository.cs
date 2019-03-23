@@ -1,4 +1,5 @@
-﻿using ERP.Framework.IRepository;
+﻿using ERP.Framework.Entity;
+using ERP.Framework.IRepository;
 using ERP.Framework.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ERP.Framework.Repository.SqlServer
 {
-    public class SysToolBarRepository: ISysToolBarRepository
+    public class SysToolBarRepository: BaseRepository<SysToolBar>,ISysToolBarRepository
     {
         public List<VM_Toolbar> GetToolbars(SysModule sysModule)
         {
@@ -21,6 +22,11 @@ namespace ERP.Framework.Repository.SqlServer
                 }
             };
             return list;
+        }
+
+        public List<SysToolBar> GetToolBars(SysModule sysModule)
+        {
+            return new List<SysToolBar>();
         }
     }
 }

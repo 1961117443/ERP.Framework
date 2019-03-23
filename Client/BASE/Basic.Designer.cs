@@ -1,6 +1,6 @@
 ﻿namespace Client.BASE
 {
-    partial class Base
+    partial class Basic
     {
         /// <summary>
         /// Required designer variable.

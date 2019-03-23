@@ -44,8 +44,13 @@
     <Compile Include="BaseFormService.cs" />
     <Compile Include="MainService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysModuleService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ERP.Framework.Core\ERP.Framework.Core.csproj">
+      <Project>{1CC21A73-D934-430B-A8EA-32885A507992}</Project>
+      <Name>ERP.Framework.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ERP.Framework.Data\ERP.Framework.Entity.csproj">
       <Project>{8fa00260-66bf-4a28-90ee-e8527d537e0e}</Project>
       <Name>ERP.Framework.Entity</Name>

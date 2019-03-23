@@ -15,30 +15,7 @@ using ERP.Framework.Common.Attributes;
 using System.Threading;
 
 namespace Client
-{
-    //public class AsyncTest
-    //{
-    //    public static async Task Test1()
-    //    {
-    //        Task t=  test1();
-    //        //test2();
-    //      //  Console.WriteLine($"不知道test2有没有挂起 线程id:{Thread.CurrentThread.ManagedThreadId}"); 
-    //       //await t;
-    //        await Task.Run(() => { Thread.Sleep(2000); Console.WriteLine($"{DateTime.Now}异步方法执行完毕 线程id:{Thread.CurrentThread.ManagedThreadId}"); });
-    //    }
-    //    private static async Task test1()
-    //    {
-    //        Console.WriteLine($"{DateTime.Now}这是一个同步方法test1");
-    //        await Task.Run(() => {Thread.Sleep(2000); Console.WriteLine($"{DateTime.Now}同步方法test1等1秒 线程id:{Thread.CurrentThread.ManagedThreadId}"); }); //异步等两秒
-    //        Console.WriteLine($"{DateTime.Now}我都不知道这个方法什么时候执行！ 线程id:{Thread.CurrentThread.ManagedThreadId}");
-            
-    //    }
-    //    private static void test2()
-    //    {
-    //        { Console.WriteLine($"{DateTime.Now}开始执行同步方法test2  线程id:{Thread.CurrentThread.ManagedThreadId}"); Thread.Sleep(4000); Console.WriteLine($"{DateTime.Now}同步方法test2  线程id:{Thread.CurrentThread.ManagedThreadId}"); }  
-
-    //    }
-    //}
+{ 
     public partial class FrmMain : Form
     {
         protected readonly IMainService mainService;
@@ -119,13 +96,9 @@ namespace Client
                 }
             }
             var form = new BaseForm(sysModule);
-            form.MdiParent = this; 
-            //form.MinimizeBox = false;
-            //form.MaximizeBox = false;
-            form.WindowState = FormWindowState.Maximized;
-
-            #region 反射注入属性
-            var props = form.GetType().GetProperties(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public).Where(w => w.GetCustomAttribute<DependencyInjectionAttribute>() != null);
+            #region 反射注入属性 
+            var props = form.GetType().GetProperties(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public)
+                .Where(w => w.GetCustomAttribute<DependencyInjectionAttribute>() != null);
             foreach (var p in props)
             {
                 var obj = AutofacHelper.GetContainer().Resolve(p.PropertyType);
@@ -133,12 +106,20 @@ namespace Client
                 {
                     p.SetValue(form, obj);
                 }
-            }
+            } 
+            BaseForm.InitMethod.Invoke(form, null);
             #endregion
+
+            #region 设置窗体的基本属性和事件
+            form.MdiParent = this;
+            //form.MinimizeBox = false;
+            //form.MaximizeBox = false;
+            form.WindowState = FormWindowState.Maximized; 
             form.FormClosed += (o, e) =>
             {
                 ModuleList.DropDownItems.RemoveByKey(form.Name);
-            };
+            }; 
+            #endregion
             form.Show();
 
             var index = ModuleList.DropDownItems.IndexOfKey(sysModule.id);
@@ -148,6 +129,12 @@ namespace Client
                 m.Click += ShowModule;
                 ModuleList.DropDownItems.Add(m);
             }
+        }
+
+
+        private void CreateInstance(params object[] param)
+        {
+            
         }
 
     }
